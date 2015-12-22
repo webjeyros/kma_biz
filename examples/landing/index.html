@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="ru">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+	<meta charset="UTF-8" />
+	<title>Отпугиватель грызунов и насекомых Pest-Reject</title>
+	<link rel="stylesheet" type="text/css" href="css/wb.validation.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox-1.3.0.css" />
+	<link rel="stylesheet" type="text/css" href="css/all.css" />
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.ui.effect.min.js"></script>
+	<script type="text/javascript" src="js/wb.carousel.min.js"></script>
+
+	<script type="text/javascript" src="js/jquery.easing-1.3.pack.js"></script>
+	<script type="text/javascript" src="js/jquery.fancybox-1.3.0.pack.js"></script>
+	<script type="text/javascript" src="js/jquery.mousewheel-3.0.2.pack.js"></script>
+
+
+	<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+    var country_list = new Object();
+        country_list['UA'] = {s1: '299',
+        s2: '25',
+        s3: '324',
+        s4: '460',
+        curr: 'грн.',
+        specialfields : {
+                    }
+    };
+        country_list['RU'] = {s1: '1490',
+        s2: '350',
+        s3: '1840',
+        s4: '2365',
+        curr: 'руб.',
+        specialfields : {
+                    }
+    };
+    </script>
+
+
+
+    <script type="text/javascript">
+        function change_country(id)
+        {
+            $('.price_land_s1').text(country_list[id].s1);
+            $('.price_land_s2').text(country_list[id].s2);
+            $('.price_land_s3').text(country_list[id].s3);
+            $('.price_land_s4').text(country_list[id].s4);
+            $('.price_land_curr').text(country_list[id].curr);
+            $('.price_field_s1').val(country_list[id].s1);
+            $('.price_field_s2').val(country_list[id].s2);
+            $('.price_field_s3').val(country_list[id].s3);
+            for(var i in country_list[id].specialfields)
+            {
+                $('.additional_fields_' + i).html(country_list[id].specialfields[i]);
+            }
+        }
+
+        $(function(){
+            $('.country_select').change(function(){
+                change_country($(this).val());
+                $('.country_select').val($(this).val());
+            });
+            change_country('RU');
+        });
+    </script>
+
+    <script>
+        country_list2 = new Object();
+country_list2['RU'] = {country_name: 'Почты России', country_name2: 'России', delivery_time: '3-9', reqv: '<img src="http://baby-liss.org/rekvizity-2-2.png">'};
+country_list2['UA'] = {country_name: 'Новой Почты', country_name2: 'Украины', delivery_time: '3-5', reqv: 'ФОП Сидоренко Денис Олегович ИНН 3260114111 ОГРН 25880000000028045 01034, г. Киев, ул. Бажанова, 12Б'};
+    </script>
+
+<link href="css/custom-styles.min.css" type="text/css" rel="stylesheet"/>
+<script src="js/custom-functions.min.js" type="text/javascript"></script>
+
+
+<script>
+    $(function() {
+                KMA.initCallback(20000);
+        
+                KMA.initComebacker(3000);
+        
+                KMA.checkAndSetCountryField('RU');
+        
+        KMA.validateAndSendForm(false);
+    });
+</script>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+
+ $('select[name=country]').on('change', function() {
+  var ctr=$(this).val();
+  $('.country_name').text(country_list2[ctr].country_name);
+  $('.country_name2').text(country_list2[ctr].country_name2);
+  $('.delivery_time').text(country_list2[ctr].delivery_time);
+  $('.reqv').html(country_list2[ctr].reqv);
+  
+  if(ctr=="RU")
+	$("#Image55").attr("src","img/tooltip-04_ru.png");
+   else
+	if(ctr=="UA")
+		$("#Image55").attr("src","img/tooltip-04.png");
+ });
+   $('select[name=country]').trigger('change');
+    });  
+</script>
+
+</head>
+<body>
+<div id="Layer1" style="position:absolute;text-align:center;left:0;top:308px;width:100%;height:414px;z-index:72;" title="">
+<div id="Layer1_Container" style="width:1000px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
+<div id="wb_Image8" style="position:absolute;left:608px;top:14px;width:108px;height:119px;z-index:12;">
+<img src="img/cdbg.png" id="Image8" alt="" style="width:108px;height:119px;"></div>
+<div id="wb_Image4" style="position:absolute;left:718px;top:14px;width:108px;height:119px;z-index:13;">
+<img src="img/cdbg.png" id="Image4" alt="" style="width:108px;height:119px;"></div>
+<div id="wb_Image3" style="position:absolute;left:827px;top:14px;width:108px;height:119px;z-index:14;">
+<img src="img/cdbg.png" id="Image3" alt="" style="width:108px;height:119px;"></div>
+<div id="wb_Text9" style="position:absolute;left:735px;top:171px;width:224px;height:38px;z-index:15;text-align:left;">
+<span style="color:#F5DEB3;font-family:'Trebuchet MS';font-size:13px;"><em>просто оставьте Ваши ФИО,<br>телефон в форме ниже<br></em></span></div>
+<div id="wb_Text8" style="position:absolute;left:705px;top:138px;width:246px;height:29px;text-align:center;z-index:16;">
+<span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:24px;"><strong>получите скидку</strong></span></div>
+<div id="wb_Form1" style="position:absolute;left:640px;top:210px;width:327px;height:191px;z-index:17;">
+	
+	<form class="order-form"  name="Form1" method="post" action="success.php" enctype="multipart/form-data" accept-charset="UTF-8">
+		<div class="form-item">
+			<label for="name-last">Страна</label>
+			<select name="country" id="country" class="country_select name-last"><option value='RU' selected="selected">Россия</option><option value='UA'>Украина</option></select>
+		</div>
+		<div class="form-item">
+			<label for="name-last">ФИО:</label>
+			<input class="name-last" type="text" id="name-last" name="name" value="" placeholder="Ваше ФИО" minlength="2" />
+		</div>
+	
+		<div class="form-item">
+			<label for="phone">Телефон:</label>
+			<input class="phone" type="text" id="phone" name="phone" value="" placeholder="Ваш телефон" minlength="7" />
+		</div>
+		<input class="form-submit" type="submit" name="" value="Заказать" />
+	<input type="hidden" name="s1" class="price_field_s1" value="1490" />
+<input type="hidden" name="s2" class="price_field_s2" value="350" />
+<input type="hidden" name="s3" class="price_field_s3" value="1840" />
+</form>
+	
+</div>
+<div id="wb_Image18" style="position:absolute;left:652px;top:133px;width:64px;height:64px;z-index:18;">
+<img src="img/i5.png" id="Image18" alt="" style="width:64px;height:64px;"></div>
+<iframe name="InlineFrame1" id="InlineFrame7" style="position:absolute;left:622px;top:24px;width:77px;height:58px;z-index:19;" src="timer/countdown_hours.html" scrolling="no"></iframe>
+<div id="wb_Text29" style="position:absolute;left:631px;top:84px;width:60px;height:18px;text-align:center;z-index:20;">
+<span style="color:#1F1F1F;font-family:'Trebuchet MS';font-size:13px;"><strong>часов</strong></span></div>
+<div id="wb_Text10" style="position:absolute;left:741px;top:84px;width:60px;height:18px;text-align:center;z-index:21;">
+<span style="color:#1F1F1F;font-family:'Trebuchet MS';font-size:13px;"><strong>минут</strong></span></div>
+<iframe name="InlineFrame1" id="InlineFrame6" style="position:absolute;left:729px;top:24px;width:85px;height:59px;z-index:22;" src="timer/countdown_minutes.html" scrolling="no"></iframe>
+<div id="wb_Text4" style="position:absolute;left:852px;top:84px;width:60px;height:18px;text-align:center;z-index:23;">
+<span style="color:#1F1F1F;font-family:'Trebuchet MS';font-size:13px;"><strong>секунд</strong></span></div>
+<iframe name="InlineFrame1" id="InlineFrame5" style="position:absolute;left:835px;top:26px;width:89px;height:58px;z-index:24;" src="timer/countdown_seconds.html" scrolling="no"></iframe>
+<div id="wb_Image38" style="position:absolute;left:412px;top:184px;width:235px;height:165px;z-index:25;">
+<img src="img/badge4.png" id="Image38" alt="" style="width:235px;height:165px;"></div>
+<div id="wb_Text28" style="position:absolute;left:452px;top:285px;width:155px;height:18px;text-align:center;z-index:26;">
+<style type="text/css">
+#wb_Text28
+{
+text-shadow: 1px 1px #ffffff;
+color: red;
+}
+</style><span style="color:#000000;font-family:'Trebuchet MS';font-size:13px;"><em>цена до конца дня</em></span></div>
+<div id="wb_Text27" style="position:absolute;left:469px;top:213px;width:138px;height:54px;text-align:center;z-index:27;">
+<style type="text/css">
+#wb_Text27
+{
+text-shadow: 1px 1px #000000;
+}
+</style><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:43px;"><strong><span class="price_land_s1">1490</span> </strong></span><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:19px;"><strong><span class="price_land_curr">руб.</span></strong></span><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:64px;"><strong> </strong></span></div>
+</div>
+</div>
+<div id="Layer2" style="position:absolute;text-align:center;left:0px;top:720px;width:100%;height:214px;z-index:73;" title="">
+<div id="Layer2_Container" style="width:1000px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
+<div id="wb_Text37" style="position:absolute;left:631px;top:30px;width:355px;height:122px;text-align:right;z-index:48;">
+<span style="color:#228B22;font-family:'Trebuchet MS';font-size:20px;">СТАРАЯ ЦЕНА&nbsp; </span><span style="color:#FF0000;font-family:'Trebuchet MS';font-size:20px;"><strike><span class="price_land_s4">2365</span> </strike></span><span style="color:#228B22;font-family:'Trebuchet MS';font-size:20px;"> <span class="price_land_curr">руб.</span> <br></span><span style="color:#228B22;font-family:'Trebuchet MS';font-size:27px;">ТОЛЬКО СЕГОДНЯ <br></span><span style="color:#228B22;font-family:'Trebuchet MS';font-size:29px;">НАША ЦЕНА </span><span style="color:#FF0000;font-family:'Trebuchet MS';font-size:48px;"><span class="price_land_s1">1490</span> <span style="color:#228B22;font-family:'Trebuchet MS';font-size:48px;"> </span><span style="color:#228B22;font-family:'Trebuchet MS';font-size:29px;"><span class="price_land_curr">руб.</span></span></div>
+<div id="wb_Text31" style="position:absolute;left:16px;top:33px;width:649px;height:159px;text-align:center;z-index:49;">
+<span style="color:#000000;font-family:'Trebuchet MS';font-size:27px;"><strong>Отпугиватель грызунов и насекомых<br>Pest-Reject - ЛУЧШАЯ ЗАЩИТА ВАШЕГО ДОМА И ИМУЩЕСТВА!<br></strong></span></div>
+</div>
+</div>
+<div id="Layer4" style="position:absolute;text-align:center;left:0px;top:2313px;width:100%;height:282px;z-index:74;" title="">
+<div id="Layer4_Container" style="width:1000px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
+<div id="wb_Image32" style="position:absolute;left:31px;top:33px;width:108px;height:119px;z-index:50;">
+<img src="img/cdbg.png" id="Image32" alt="" style="width:108px;height:119px;"></div>
+<div id="wb_Image31" style="position:absolute;left:141px;top:33px;width:108px;height:119px;z-index:51;">
+<img src="img/cdbg.png" id="Image31" alt="" style="width:108px;height:119px;"></div>
+<div id="wb_Image30" style="position:absolute;left:250px;top:33px;width:108px;height:119px;z-index:52;">
+<img src="img/cdbg.png" id="Image30" alt="" style="width:108px;height:119px;"></div>
+<iframe name="InlineFrame1" id="InlineFrame1" style="position:absolute;left:45px;top:43px;width:77px;height:58px;z-index:53;" src="timer/countdown_hours.html" scrolling="no"></iframe>
+<iframe name="InlineFrame1" id="InlineFrame2" style="position:absolute;left:152px;top:43px;width:85px;height:59px;z-index:54;" src="timer/countdown_minutes.html" scrolling="no"></iframe>
+<iframe name="InlineFrame1" id="InlineFrame3" style="position:absolute;left:258px;top:45px;width:89px;height:58px;z-index:55;" src="timer/countdown_seconds.html" scrolling="no"></iframe>
+<div id="wb_Text16" style="position:absolute;left:275px;top:103px;width:60px;height:18px;text-align:center;z-index:56;">
+<span style="color:#1F1F1F;font-family:'Trebuchet MS';font-size:13px;"><strong>секунд</strong></span></div>
+<div id="wb_Text17" style="position:absolute;left:164px;top:103px;width:60px;height:18px;text-align:center;z-index:57;">
+<span style="color:#1F1F1F;font-family:'Trebuchet MS';font-size:13px;"><strong>минут</strong></span></div>
+<div id="wb_Text20" style="position:absolute;left:54px;top:103px;width:60px;height:18px;text-align:center;z-index:58;">
+<span style="color:#1F1F1F;font-family:'Trebuchet MS';font-size:13px;"><strong>часов</strong></span></div>
+<div id="wb_Image49" style="position:absolute;left:304px;top:40px;width:235px;height:165px;z-index:59;">
+<img src="img/badge4.png" id="Image49" alt="" style="width:235px;height:165px;"></div>
+<div id="wb_InlineFrame9" style="position:absolute;left:634px;top:214px;width:265px;height:53px;z-index:60;">
+<a id="InlineFrame9" title="Заказать" href="index.html#wb_Text8"><img src="img/btnz.png" style="width:265px;height:53px;" alt="Заказать"></a>
+</div>
+<div id="wb_Text21" style="position:absolute;left:353px;top:66px;width:138px;height:81px;text-align:center;z-index:61;">
+<style type="text/css">
+#wb_Text27
+{
+text-shadow: 1px 1px #000000;
+
+}
+</style><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:64px;"><strong>-37</strong></span><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:35px;"><strong>%</strong></span></div>
+<div id="wb_Text44" style="position:absolute;left:346px;top:140px;width:155px;height:18px;text-align:center;z-index:62;">
+<style type="text/css">
+#wb_Text28
+{
+text-shadow: 1px 1px #ffffff;
+color: red;
+}
+</style><span style="color:#000000;font-family:'Trebuchet MS';font-size:13px;"><em>скидка до конца дня</em></span></div>
+<div id="wb_Image29" style="position:absolute;left:707px;top:92px;width:135px;height:118px;z-index:63;">
+<img src="img/arrow2.png" id="Image29" alt="" style="width:135px;height:118px;"></div>
+<div id="wb_Text43" style="position:absolute;left:69px;top:175px;width:515px;height:87px;z-index:64;text-align:left;">
+<span style="color:#FFF5EE;font-family:'Trebuchet MS';font-size:20px;">СТАРАЯ ЦЕНА&nbsp; </span><span style="color:#FF0000;font-family:'Trebuchet MS';font-size:20px;"><strike><span class="price_land_s4">2365</span></strike> <span class="price_land_curr">руб.</span></span><span style="color:#FFF5EE;font-family:'Trebuchet MS';font-size:20px;"> <br>ТОЛЬКО СЕГОДНЯ </span><span style="color:#FFF5EE;font-family:'Trebuchet MS';font-size:29px;">НАША ЦЕНА </span><span style="color:#FF0000;font-family:'Trebuchet MS';font-size:48px;"><span class="price_land_s1">1490</span>  </span><span style="color:#FF0000;font-family:'Trebuchet MS';font-size:29px;"><span class="price_land_curr">руб.</span></span></div>
+</div>
+</div>
+<div id="Layer5" style="position:absolute;text-align:center;left:0px;top:2598px;width:100%;height:67px;z-index:75;" title="">
+<div id="Layer5_Container" style="width:1000px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
+<div id="wb_Text22" style="position:absolute;left:233px;top:14px;width:534px;height:40px;text-align:center;z-index:65;">
+<span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:32px;"><strong>Как мы работаем</strong></span></div>
+</div>
+</div>
+<div id="Layer7" style="position:absolute;text-align:center;left:0px;top:3138px;width:100%;height:198px;z-index:76;" title="">
+<div id="Layer7_Container" style="width:1000px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
+
+<div id="wb_InlineFrame16" style="position:absolute;left:616px;top:58px;width:265px;height:53px;z-index:68;">
+<a id="InlineFrame16" title="Заказать оптом" href="index.html#wb_Text8"><img src="img/btnz.png" style="width:265px;height:53px;" alt="Заказать оптом"></a>
+</div>
+<div id="wb_Text46" style="position:absolute;left:574px;top:21px;width:392px;height:22px;z-index:69;text-align:left;">
+<span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:16px;"></span></div>
+<div id="wb_Text64" style="position:absolute;left:49px;top:19px;width:414px;height:90px;z-index:70;text-align:center;">
+<span style="color:#C0C0C0;font-family:'Trebuchet MS';font-size:16px;"><strong><span class="reqv">ФОП Сидоренко Денис Олегович
+ИНН 3260114111 ОГРН 25880000000028045
+01034, г. Киев, ул. Бажанова, 12Б</span><br>	<a href="index.html#" modal="polit" style="color:#fff;">Политика конфиденциальности</a></strong></span></div>
+</div>
+</div>
+
+<div id="container">
+
+
+
+<div id="wb_Carousel1" style="position:absolute;left:8px;top:104px;width:487px;height:574px;z-index:81;overflow:hidden">
+<div id="Carousel1" style="position:absolute">
+<div class="frame">
+<div id="wb_Shape1" style="position:absolute;left:40px;top:393px;width:363px;height:145px;filter:alpha(opacity=60);-moz-opacity:0.60;opacity:0.60;z-index:28;">
+<img src="img/img0002.png" id="Shape1" alt="" style="border-width:0;width:363px;height:145px;"></div>
+<div id="wb_Image1" style="position:absolute;left:60px;top:421px;width:64px;height:64px;z-index:29;">
+<img src="img/i4.png" id="Image1" alt="" style="width:64px;height:64px;"></div>
+<div id="wb_" style="position:absolute;left:131px;top:429px;width:239px;height:81px;text-align:center;z-index:30;">
+<style type="text/css">
+#wb_header1
+{
+text-shadow: 1px 1px #0c779d;
+color: red;
+}
+</style><span style="color:#DCDCDC;font-family:'Trebuchet MS';font-size:24px;"><strong>Доставка в любую точку страны</strong></span><span style="color:#F5DEB3;font-family:'Trebuchet MS';font-size:17px;"><em><br></em></span></div>
+<div id="wb_Image6" style="position:absolute;left:38px;top:16px;width:370px;height:370px;z-index:31;">
+<img src="img/_0224185_image2.jpg" id="Image6" alt="" style="width:370px;height:370px;"></div>
+</div>
+<div class="frame">
+<div id="wb_Shape7" style="position:absolute;left:527px;top:393px;width:363px;height:145px;filter:alpha(opacity=60);-moz-opacity:0.60;opacity:0.60;z-index:32;">
+<img src="img/img0016.png" id="Shape7" alt="" style="border-width:0;width:363px;height:145px;"></div>
+<div id="wb_Text5" style="position:absolute;left:605px;top:419px;width:243px;height:136px;text-align:center;z-index:33;">
+<style type="text/css">
+#wb_header1
+{
+text-shadow: 1px 1px #0c779d;
+color: red;
+}
+</style><span style="color:#000000;font-family:'Trebuchet MS';font-size:24px;"><strong>Оплата наложенным платежом, только при получении</strong></span><span style="color:#8B4513;font-family:'Trebuchet MS';font-size:17px;"><em><br></em></span></div>
+<div id="wb_Image14" style="position:absolute;left:541px;top:420px;width:64px;height:64px;z-index:34;">
+<img src="img/i4.png" id="Image14" alt="" style="width:64px;height:64px;"></div>
+<div id="wb_Image5" style="position:absolute;left:523px;top:11px;width:370px;height:370px;z-index:35;">
+<img src="img/product_1516.jpg" id="Image5" alt="" style="width:370px;height:370px;"></div>
+</div>
+</div>
+</div>
+<div id="wb_Text3" style="position:absolute;left:467px;top:168px;width:527px;height:112px;text-align:center;z-index:82;">
+<span style="color:#000000;font-family:'Trebuchet MS';font-size:24px;"><strong>Универсальный отпугиватель<br> грызунов и насекомых<br></strong></span><span style="color:#E57F01;font-family:'Trebuchet MS';font-size:43px;"><strong>Pest-Reject<sup></sup></strong></span></div>
+<div id="wb_Text33" style="position:absolute;left:98px;top:890px;width:819px;height:35px;text-align:center;z-index:83;">
+<span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:27px;">Достаточно просто вставить в розетку!</span></div>
+<div id="wb_Image53" style="position:absolute;left:47px;top:2697px;width:131px;height:129px;z-index:84;">
+<img src="img/tooltip-01.png" id="Image53" alt="" style="width:131px;height:129px;"></div>
+<div id="wb_Text23" style="position:absolute;left:10px;top:2833px;width:210px;height:120px;text-align:center;z-index:85;">
+<span style="color:#2F4F4F;font-family:'Trebuchet MS';font-size:19px;"><strong>Вы оставляете заявку на сайте или по телефону, вписав имя и телефон (обязательно)</strong></span></div>
+<div id="wb_Text39" style="position:absolute;left:237px;top:2833px;width:210px;height:96px;text-align:center;z-index:86;">
+<span style="color:#2F4F4F;font-family:'Trebuchet MS';font-size:19px;"><strong>Менеджер связывается с Вами для подтверждения заказа</strong></span></div>
+<div id="wb_Text51" style="position:absolute;left:454px;top:2833px;width:210px;height:120px;text-align:center;z-index:87;">
+<span style="color:#2F4F4F;font-family:'Trebuchet MS';font-size:19px;"><strong>Мы быстро доставляем Вашу посылку в ближайшее отделение <span class="country_name">Почты России</span>!</strong></span></div>
+<div id="wb_Text52" style="position:absolute;left:695px;top:2833px;width:210px;height:120px;text-align:center;z-index:88;">
+<span style="color:#2F4F4F;font-family:'Trebuchet MS';font-size:19px;"><strong>Никаких предоплат! Вы получаете свой товар и платите за него на почте.</strong></span></div>
+<div id="wb_Image55" style="position:absolute;left:732px;top:2697px;width:150px;height:129px;z-index:89;">
+<img src="img/tooltip-04.png" id="Image55" alt="" style="width:150px;height:129px;"></div>
+<div id="wb_Image56" style="position:absolute;left:275px;top:2698px;width:128px;height:130px;z-index:90;">
+<img src="img/tooltip-02.png" id="Image56" alt="" style="width:128px;height:130px;"></div>
+<div id="wb_Image33" style="position:absolute;left:496px;top:2698px;width:128px;height:130px;z-index:91;">
+<img src="img/tooltip-03.png" id="Image33" alt="" style="width:128px;height:130px;"></div>
+<div id="wb_Image54" style="position:absolute;left:202px;top:2749px;width:48px;height:48px;z-index:92;">
+<img src="img/arrow.png" id="Image54" alt="" style="width:48px;height:48px;"></div>
+<div id="wb_Image57" style="position:absolute;left:426px;top:2749px;width:48px;height:48px;z-index:93;">
+<img src="img/arrow.png" id="Image57" alt="" style="width:48px;height:48px;"></div>
+<div id="wb_Image58" style="position:absolute;left:657px;top:2749px;width:48px;height:48px;z-index:94;">
+<img src="img/arrow.png" id="Image58" alt="" style="width:48px;height:48px;"></div>
+
+<div id="wb_Text62" style="position:absolute;left:519px;top:67px;width:494px;height:44px;text-align:center;z-index:97;">
+<span style="color:#000000;font-family:'Trebuchet MS';font-size:16px;">Официальный представитель ТМ &quot;<strong>Pest-Reject</strong>&quot; в СНГ. <br>Заказывайте у нас по цене производителя.</span></div>
+
+<marquee direction="left" scrolldelay="90" scrollamount="6" behavior="scroll" loop="0" style="position:absolute;left:10px;top:37px;width:502px;height:60px;z-index:100;" id="Marquee1"><span style="color:#FF0000;font-family:'Trebuchet MS';font-size:48px;">ЛУЧШАЯ ЗАЩИТА ДЛЯ ВАШЕГО ДОМА!</span></marquee>
+<div id="wb_Image2" style="position:absolute;left:33px;top:1941px;width:247px;height:358px;z-index:101;">
+<img src="img/15cc144629d0d599cac4d0143bc091f7.jpg" id="Image2" alt="" style="width:247px;height:358px;"></div>
+<div id="wb_Image19" style="position:absolute;left:366px;top:1695px;width:49px;height:50px;z-index:102;">
+<img src="img/06b.png" id="Image19" alt="" style="width:49px;height:50px;"></div>
+<div id="wb_Text32" style="position:absolute;left:0px;top:942px;width:997px;height:578px;z-index:103;text-align:left;">
+<span style="color:#000000;font-family:'Trebuchet MS';font-size:13px;"> <strong>Д</strong></span><span style="color:#000000;font-family:'Trebuchet MS';font-size:16px;"><strong>авно боритесь с тараканами, или у Вас завелись мыши, а может просто комары замучили? Тогда Вам обязательно нужно приобрести новое универсальное устройство для отпугивания грызунов и насекомых Pest-Reject.<br><br>&nbsp;&nbsp; Это электронное устройство позволит&nbsp; забыть о надоедливых вредителях! Pest-Reject работает от обычной розетки 220В. Посылая электрические импульсы, прибор создает условия невозможные для жизни крыс, мышей, тараканов, муравьев и даже комаров.&nbsp; Важно отметить, что действие электронного устройства на жизнедеятельности человека не отражается. Кроме того, электронные приборы, которые подключены к одной сети с Pest-Reject, также работают исправно.<br><br>&nbsp;&nbsp; Принцип действия заключается в том, что при включении отпугивателя в розетку проводка помещения превращается в гигантский репеллер, в рамках которого невозможна жизнь разнообразных вредителей.<br><br>&nbsp;&nbsp; Главной особенностью устройства является его универсальность. Он приспособлен для работы в самых разных помещениях (жилых, складских, продовольственных) и в самых разнообразных условиях. Например, диапазон температур, в которых Риддекс будет исправно работать, колеблется от -30˚С до +40˚С, а диапазон влажности - от 20% до 90%.<br><br></strong></span><span style="color:#000080;font-family:'Trebuchet MS';font-size:19px;"><strong>Внимание!!! Когда нельзя использовать Pest-Reject!!!</strong></span><span style="color:#000000;font-family:'Trebuchet MS';font-size:16px;"><strong><br><br>Устройство является безопасным для всех домашних животных, за исключением тех, которые относятся к грызунам - хомяков, декоративных крыс, песчанок и т.д. Не содержит раздражающих паров или пестицидов.<br></strong></span><span style="color:#000000;font-family:'Trebuchet MS';font-size:19px;"><strong><br></strong></span><span style="color:#000080;font-family:'Trebuchet MS';font-size:19px;"><strong>Насколько быстро действует Pest-Reject?</strong></span><span style="color:#000000;font-family:'Trebuchet MS';font-size:16px;"><strong><br><br>Отпугиватель насекомых и грызунов Pest-Reject не является устройством мгновенного действия. Наберитесь терпения!&nbsp; Чтобы изгнать крыс и мышей обычно требуется от 2 до 4 недель, а для борьбы с тараканами, муравьями и другими насекомыми - от 8 до 12 недель. Но даже после окончательного изгнания вредителей не рекомендуется отключать Pest-Reject - он абсолютно безопасен для человека и предотвратит повторное возвращение вредителей. </strong></span></div>
+<div id="wb_Image26" style="position:absolute;left:456px;top:2281px;width:485px;height:129px;z-index:104;">
+<img src="img/Time-Warning_03.png" id="Image26" alt="" style="width:485px;height:129px;"></div>
+<div id="wb_Image28" style="position:absolute;left:458px;top:650px;width:160px;height:74px;z-index:105;">
+<img src="img/arrow4.png" id="Image28" alt="" style="width:160px;height:74px;"></div>
+<div id="wb_Text2" style="position:absolute;left:592px;top:114px;width:459px;height:24px;z-index:106;text-align:left;">
+<span style="color:#000000;font-family:'Trebuchet MS';font-size:13px;">&nbsp;&nbsp; </span><span style="color:#000000;font-family:'Trebuchet MS';font-size:19px;"> Остерегайтесь дешевых подделок! </span><span style="color:#000000;font-family:'Trebuchet MS';font-size:13px;">&nbsp;&nbsp;&nbsp;&nbsp; </span></div>
+<div id="wb_Image7" style="position:absolute;left:0px;top:1634px;width:315px;height:295px;z-index:107;">
+<img src="img/4374f11d7be07c14d5c6c68e5da5edcc.png" id="Image7" alt="" style="width:315px;height:295px;"></div>
+<div id="wb_Image13" style="position:absolute;left:320px;top:2173px;width:94px;height:64px;z-index:108;">
+<img src="img/a75c8f7ca649cf6cb31715dd8629b138.png" id="Image13" alt="" style="width:94px;height:64px;"></div>
+<div id="wb_Image15" style="position:absolute;left:322px;top:2094px;width:94px;height:64px;z-index:109;">
+<img src="img/b55203fc30bde6f2c74f538a016f4c5c.png" id="Image15" alt="" style="width:94px;height:64px;"></div>
+<div id="wb_Image21" style="position:absolute;left:321px;top:2013px;width:94px;height:64px;z-index:110;">
+<img src="img/2b2ea62b10eec91f27752574d85ec69d.png" id="Image21" alt="" style="width:94px;height:64px;"></div>
+<div id="wb_Image22" style="position:absolute;left:365px;top:1839px;width:49px;height:50px;z-index:111;">
+<img src="img/06b.png" id="Image22" alt="" style="width:49px;height:50px;"></div>
+<div id="wb_Image23" style="position:absolute;left:364px;top:1768px;width:49px;height:50px;z-index:112;">
+<img src="img/06b.png" id="Image23" alt="" style="width:49px;height:50px;"></div>
+<div id="wb_Text6" style="position:absolute;left:439px;top:1701px;width:537px;height:44px;z-index:113;text-align:left;">
+<span style="color:#000000;font-family:'Trebuchet MS';font-size:16px;"><strong>Полностью безопасен для человека и крупных домашних животных. Не то, что химия!</strong></span></div>
+<div id="wb_Text11" style="position:absolute;left:437px;top:1768px;width:523px;height:44px;z-index:114;text-align:left;">
+<span style="color:#000000;font-family:'Trebuchet MS';font-size:16px;"><strong>Благодаря периодичности ультразвука и электромагнитных волн, не вызывает привыкание!</strong></span></div>
+<div id="wb_Text13" style="position:absolute;left:435px;top:1840px;width:524px;height:44px;z-index:115;text-align:left;">
+<span style="color:#000000;font-family:'Trebuchet MS';font-size:16px;"><strong>Низкое электропотребление, всего одна розетка и дом в безопасности. Больше никаких батареек.</strong></span></div>
+<div id="wb_Text15" style="position:absolute;left:428px;top:2011px;width:551px;height:44px;z-index:116;text-align:left;">
+<span style="color:#000000;font-family:'Trebuchet MS';font-size:16px;"><strong>Полное избавление от крыс и мышей. Один раз и навсегда. Пест Реджект не повторяет 2 раза.</strong></span></div>
+<div id="wb_Text18" style="position:absolute;left:427px;top:2093px;width:552px;height:44px;z-index:117;text-align:left;">
+<span style="color:#000000;font-family:'Trebuchet MS';font-size:16px;"><strong>Тараканы больше не будут чувствовать себя в безопасности, по крайней мере у Вас дома.</strong></span></div>
+<div id="wb_Text19" style="position:absolute;left:431px;top:2183px;width:544px;height:22px;z-index:118;text-align:left;">
+<span style="color:#000000;font-family:'Trebuchet MS';font-size:16px;"><strong>Ультразвук заставит комаров и мух держаться от Вас подальше.</strong></span></div>
+<div id="wb_Image16" style="position:absolute;left:368px;top:1931px;width:50px;height:50px;z-index:119;">
+<img src="img/06b.png" id="Image16" alt="" style="width:50px;height:50px;"></div>
+<div id="wb_Text30" style="position:absolute;left:440px;top:1930px;width:541px;height:44px;z-index:120;text-align:left;">
+<span style="color:#000000;font-family:'Trebuchet MS';font-size:16px;"><strong>Защитит: квартиру, дом, палатку, контейнер, любое помещение площадью до 200 кв. м.</strong></span></div>
+</div>
+
+<div id="polit" class="modal">
+    <div class="modal-block">
+        <div class="icon-close"></div>
+        <div class="title">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</div>
+        <div class="content">
+            <div class="padding">
+                <p>Наш интернет-магазин уважительно относится к правам клиента. Соблюдается строгая конфиденциальность
+                    при оформлении заказа. Сведения надёжно сохраняются и защищены от передачи. </p>
+
+                <p>Согласием на обработку данных клиента исключительно с целью оказания услуг является размещение заказа
+                    на сайте. </p>
+
+                <p>К персональным данным относится личная информация о клиенте: домашний адрес; имя, фамилия, отчество;
+                    сведения о рождении; имущественное, семейное положение; личные контакты (телефон, электронная почта)
+                    и прочие сведения, которые
+
+                    перечислены в Законе РФ № 152-ФЗ «О персональных данных» от 27 июля 2006 г. </p>
+
+                <p>Клиент вправе отказаться от обработки персональных данных. Нами в данном случае гарантируется
+                    удаление с сайта всех персональных данных в трёхдневный срок в рабочее время. Подобный отказ клиент
+                    может оформить простым электронным
+
+                    письмом на адрес, указанный на странице нашего сайта. </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="agreement" class="modal">
+    <div class="modal-block">
+        <div class="icon-close"></div>
+        <div class="title">ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ<br><span class="agreement-clean">интернет-магазина http://reject-pest.org/</span></div>
+        <div class="content">
+            <div class="padding">
+                <p>Настоящее пользовательское соглашение заключается между Вами – физическим лицом и администрацией интернет ресурса интернет-магазина http://reject-pest.org/</p>
+                <p><b>Пользователь</b> – физическое лицо, достигшее совершеннолетия, способное своими действиями приобретать для себя гражданские права и самостоятельно их осуществлять, а также способность своими действиями создавать для себя гражданские обязанности, самостоятельно их выполнять и нести ответственность в случае их невыполнения, принявшее условия настоящего пользовательского соглашения и пользующееся услугами сайта.</p>
+                <p><b>Производитель</b> – лицо, которое в силу своего вида экономической деятельности, на основе предпринимательской деятельности, занимается производством и обслуживанием продукции.</p>
+                <p><b>Администрация</b> – субъект предпринимательской <span class="additional_fields_organization"></span> (ОГРН: <span class="additional_fields_ogrn"></span>, ИНН: <span class="additional_fields_inn"></span>, место регистрации: <span class="additional_fields_address"></span>), являющийся владельцем сайта на основании права частной собственности и осуществляющий организационную, финансовую, техническую поддержку существования и функционирования сайта.</p>
+                <p><b>Стороны</b> – Администрация, Пользователи и Посетители сайта.</p>
+                <p><b>Сайт</b> – интернет ресурс интернет-магазина, имеющий доменное имя http://reject-pest.org, пребывающий под организационным управлением и принадлежащий администрации, на условиях права частной собственности.</p>
+                <p><b>Продукция</b> – товары и услуги, предлагаемые Пользователю Администрацией, исчерпывающий перечень которых размещен на сайте.</p>
+                <p><b>Публичная оферта</b> – адресованное администрацией неопределенному кругу лиц или нескольким конкретным лицам предложение, которое определенно, конкретно и выражает намерение лица, сделавшего предложение, считать себя заключившим данное пользовательское соглашение с адресатом, которым будет принято предложение.</p>
+                <p><b>Акцепт</b> – полное принятие одной из Сторон условий публичной оферты Администрации на заключение данного пользовательского соглашения. Акцептированием публичной оферты происходит в момент начала пользования сайтом (в том числе в ознакомительных целях) и его сервисами (услугами).</p>
+
+                <p class="no-margin"><b>1. Общие положения</b></p>
+                <p class="no-margin">1.1. Настоящее Пользовательское соглашение (далее по тексту – «Соглашение») определяет общие правила посещения, использования сервисов и нормы общего поведения на Сайте Пользователями и регулирует гражданско-правовые взаимоотношения, которые складываются между Пользователями, а так же Пользователями и Администрацией в процессе их взаимодействия.</p>
+                <p class="no-margin">1.2. Настоящее Соглашение может быть изменено по решению Администрации, в одностороннем порядке. Администрация не несет обязательства личного уведомления Пользователей о таких изменениях. Новая редакция Соглашения вступает в силу, с момента публикации на сайте.</p>
+                <p class="no-margin">1.3. Условия Соглашения распространяются как на всех посетителей сайта, без исключений.</p>
+                <p>1.4. Посетитель/Пользователь, начиная пользоваться сервисом интернет-магазина, подтверждает факт того, что ознакомился с положениями настоящего пользовательского соглашения в здравом уме и при ясной памяти, понимает их в полной мере и принимает условия пользования интернет-магазином в полной мере. При несогласии с положениями настоящего Соглашения (частично или в целом), лицо, выразившее такую волю, не имеет право пользоваться информационным полем Сайта.</p>
+
+                <p class="no-margin"><b>2. Регуляция взаимодействия сторон</b></p>
+                <p class="no-margin">2.1. Администрация предоставляет Пользователям информационное поле деятельности интернет-магазина http://reject-pest.org/, которое включает в себя, но не ограничивается информацией о: наименовании, виде, качестве продукции, ее стоимости, а так же о порядке размещения заказа, оплаты и доставки продукции пользователю представителями Администрации. Информация предоставляется на бесплатной основе.</p>
+                <p class="no-margin">2.2. Пользователь самостоятельно размещает заказ на продукцию. Администрация может, но не обязуется предоставить услугу краткой консультации рекомендательного характера по задаваемым вопросам. Предоставление такой консультации осуществляется на бесплатной основе.</p>
+                <p class="no-margin">2.3. Для получения услуги указанной в п. 2.2. Пользовательского соглашения, пользователь самостоятельно размещает свой вопрос. При этом необходимо кратко сформулировать свой вопрос, а так же оставить контактные данные – E-mail, контактный номер телефона.</p>
+                <p class="no-margin">2.4. Администрация вправе не реагировать на размещенный запрос пользователя и не предоставлять ответ, в случае, если данный запрос будет нечетко сформулирован, содержать брутальные, оскорбительные имя пользователя, слова и словообороты в адрес Администрации, третьих лиц, а так же по другим причинам, руководствуясь внутренними убеждениями.</p>
+                <p class="no-margin">2.5. Реализация предоставленных сайтом услуг и (или) возможностей не предоставляет Пользователю каких-либо исключительных прав и привилегий.</p>
+                <p class="no-margin">2.4. Стороны настоящего соглашения достигли согласия о том, что Администрация вправе размещать на сайте рекламные блоки, баннеры, объявления в любых его областях, в том числе там, где размещается информация опубликованная Пользователем, без дополнительного согласия Пользователя.</p>
+                <p class="no-margin">2.5. Информация, размещаемая на сайте Администрацией, является результатом интеллектуальной деятельности Администрации и все имущественные и личные неимущественные права на такую информацию, принадлежат Администрации, до тех пор, пока не будет установлено иное. При этом у Пользователя не возникает, каких-либо исключительных прав на результат интеллектуальной деятельности Администрации, выраженной в графической, текстовой, аудио-видео форме, размещаемой Администрацией на сайте.</p>
+                <p class="no-margin">2.6. Администрация не несет обязательств по защите нарушенных прав Пользователя, в контексте урегулирования возникших на этой почве споров, в том числе, в судебном порядке.</p>
+                <p class="no-margin">2.7. Нарушение Пользователем авторских прав, принадлежащих Администрации и (или) другим лицам, влечет для нарушителя ответственность, предусмотренную положениями действующего законодательства Российской Федерации.</p>
+                <p class="no-margin">2.8. В случае выявления нарушения авторских прав Пользователем, путем незаконного размещения не принадлежащих Пользователю материалов, Администрация изымает из свободного доступа такие материалы, по первому требованию законного правообладателя.</p>
+                <p class="no-margin">2.9. Пользователю запрещается размещать на сайте информацию, которая прямо, или косвенно содержит в себе общепринятые признаки порнографии, оскорбляющую, ущемляющую, наносящую ущерб чьему-либо достоинству, содержащую призывы к насилию, бесчинству и другим действиям, влекущим нарушения норм действующего законодательства, определенной территориальной юрисдикции, содержащую вредоносное программное обеспечение и (или) другую информацию, которая может принести вред третьим лицам.</p>
+                <p class="no-margin">2.10. В случае нарушения условий п. 2.9. настоящего Соглашения и невыполнения требований Администрации, в том числе по изъятию такой информацию из публичного доступа, Пользователи сайта несут ответственность предусмотренную положениями настоящего Соглашения и(или) действующего законодательства Российской Федерации. Администрация в таком случае, имеет право убрать упомянутую в п. 2.9. информацию самостоятельно.</p>
+                <p class="no-margin">2.11. Администрация не несет ответственности за результаты посещения Пользователем сторонних (внешних) ресурсов, ссылки на которые могут быть размещены на сайте. Под результатами понимается любой результат вне зависимости от его характера, а так же тот, от наступления которого Пользователь понес какие-либо материальные убытки, моральный ущерб и другие негативные проявления.</p>
+                <p>2.12. Продукция, предлагаемая Администрацией Пользователям, распространяется дистанционно в рамках требований, установленных действующим законодательством Российской Федерации, сертифицирована и соответствует требованиям, которые определены законодательством в сфере защиты прав потребителей.</p>
+
+                <p class="no-margin"><b>3. Порядок использования услуг Пользователем</b></p>
+                <p class="no-margin">3.1. Пользователь имеет право свободно пользоваться услугами и предложениями, изложенными на сайте в полной мере, кроме тех случаев, когда такое использование является незаконным, нарушает права, свободы и интересы Администрации и (или) других Пользователей сайта.</p>
+                <p class="no-margin"><b>3.2. Порядок размещения заказа</b></p>
+                <p class="no-margin">3.2.1. Пользователь самостоятельно посещает информационное поле сайта, выбирает продукт и размещает заказ.</p>
+                <p class="no-margin">3.2.2. В случае необходимости, Администрация предоставляет Пользователю консультационно – информационное обслуживание по подбору продукции, в порядке, предусмотренном этим Пользовательским соглашением.</p>
+                <p class="no-margin">3.2.3.  Пользователь выбирает ту продукцию, которая размещена на сайте, и Администрация не несет ответственности за последствия, в случае размещения Пользователем заказа на сторонних ресурсах. Данный пункт имеет юридическую силу и в тех случаях, когда сторонние ресурсы копируют, дублируют информацию, размещенную на сайте, включая фирменное наименование, логотип, дизайн, стиль изложения информации на сайте.</p>
+                <p class="no-margin">3.2.4. Оформление заказа происходит путем заполнения формы заявки. Поля, отмеченные символом «*», обязательны к заполнению. В конце формы необходимо нажать кнопку «Заказать».</p>
+                <p class="no-margin">3.2.5. Стороны достигли согласия, что на указанный номер телефона (адрес электронной почты) Пользователя, Администрация отправляет краткое информационное сообщение с деталями заказа и/или другой необходимой информацией. Пользователь, начиная пользоваться сервисом интернет-магазина http://reject-pest.org, принимает это условие в полной мере и гарантирует, что не будет иметь каких-либо претензий относительно изложенного.</p>
+                <p class="no-margin">3.2.6. После осуществления описанных выше операций, заказу Пользователя присваивается индивидуальный номер, и заказ считается размещенным, о чем выдается соответствующее уведомление. В течение некоторого времени, Администрация связывается с Пользователем, указанным в п 3.2.5. способ, для подтверждения заказа.</p>
+                <p class="no-margin"><b>3.3. Порядок оплаты продукции</b></p>
+                <p class="no-margin">3.3.1. Продукция оплачивается в формате 100% предоплаты или на иных условиях, достигнутых Сторонами при размещении Пользователем заказа и (или) на других этапах взаимодействия Сторон.</p>
+                <p class="no-margin">3.3.4. Доставка продукции осуществляется, лишь после достижения условий, изложенных в п. 3.3.1. Пользовательского соглашения.</p>
+                <p class="no-margin"><b>3.4. Порядок доставки продукции</b></p>
+                <p class="no-margin">3.4.1 Доставка продукции Пользователю осуществляется собственными силами и транспортом  Администрации, либо транспортной компанией.</p>
+                <p class="no-margin">3.4.2. Условия доставки продукции индивидуальны для каждого взятого в отдельности случая.</p>
+                <p class="no-margin">3.4.3. Порядок и срок доставки продукции Пользователю определяется в процессе размещения заказа Пользователем.</p>
+                <p class="no-margin">3.4.4. Стороны достигли согласия, что доставка продукции Пользователю осуществляется в порядке, предусмотренном Пользовательским соглашением. Самовывоз продукции Пользователем со склада возможен, при условии дополнительного согласования порядка самовывоза с Администрацией.</p>
+                <p class="no-margin">3.4.5. В случае осуществления поставки продукции на условиях постоплаты, Продукция передается курьером Пользователю, лишь после оплаты Пользователем курьеру полной стоимости продукции.</p>
+                <p class="no-margin"><b>3.5. Порядок возврата продукции</b></p>
+                <p class="no-margin">3.5.1. Пользователь вправе отказаться от продукции в любое время до его передачи, а после передачи товара - в течение 7 дней, кроме тех случаев, когда данное право Пользователя ограничено нормами действующего законодательства Российской Федерации.</p>
+                <p class="no-margin">3.5.2. Возврат продукции надлежащего качества возможен в случае, если сохранены его товарный вид, потребительские свойства, а также документ, подтверждающий факт и условия покупки указанной продукции.</p>
+                <p class="no-margin">3.5.3. Пользователь не вправе отказаться от продукции надлежащего качества, имеющего индивидуально-определенные свойства, если указанная продукция может быть использована исключительно приобретающим его Пользователем.</p>
+                <p>3.5.4. При отказе Пользователя от продукции, производитель продукции должен возвратить ему сумму, уплаченную Пользователем в соответствии с договором, за исключением расходов на доставку от Пользователя возвращенной продукции, не позднее чем через 10 дней с даты предъявления Пользователем соответствующего требования производителю.</p>
+
+                <p class="no-margin"><b>4. Обязанности и ответственность сторон</b></p>
+                <p class="no-margin">4.1. В случае использования результатов интеллектуальной собственности Администрации - материалов сайта, в любых целях, Пользователь обязан предварительно, перед размещением таких материалов, получить на это разрешение администрации. При наличии разрешения Администрации, Пользователь обязан отобразить полное название и доменное имя источника в следующем формате: интернет-магазин http://reject-pest.org.  Гиперссылка должна являться активной и прямой, при нажатии на которую осуществляется переход на конкретную страницу сайта, с которой заимствован материал.</p>
+                <p class="no-margin">4.2. По аналогии с инструкциями, изложенными в п. 4.1. настоящего Соглашения, Пользователь обязуется действовать, в случае использования результатов интеллектуальной собственности, что принадлежать третьим лицам. Способ и порядок осуществления уточняется в процессе переговоров с правообладателем материалов.</p>
+                <p class="no-margin">4.3. Администрация не несет ответственности за действия Пользователя, которые повлекли нарушение прав третьих лиц, кроме случаев определенных действующим законодательством Российской Федерации.</p>
+                <p class="no-margin">4.4. Администрация не несет ответственности за содержание информации, размещенной пользователями.</p>
+                <p class="no-margin">4.5. Администрация не несет ответственности за содержание отзывов пользователей сайта. Отзывы пользователей сайта являются субъективными мнениями их авторов, никоим образом не претендующими на объективность. Они могут не совпадать с общественным мнением и не соответствовать действительности.</p>
+                <p class="no-margin">4.6. Решение о выдаче/не выдаче персональных данных, принимается Администрацией, лишь на основании запроса, посланного лицом Администрации, в установленном нормами действующего законодательства порядке.</p>
+                <p class="no-margin">4.7. Администрация вправе не реагировать на запросы, обращения и письма, что не содержат реквизитов обращающегося (ФИО, контактные данные).</p>
+                <p class="no-margin">4.8.  Администрация не несет ответственности за регистрационные данные, что были указаны пользователем при взаимодействии с информационным полем сайта.</p>
+                <p class="no-margin">4.9. Администрация имеет право, без объяснения причин ограничить, блокировать доступ Пользователя (в т.ч. незарегистрированного) на сайт, с частичным, или полным удалением информации, что была размещена Пользователем на сайте.</p>
+                <p>4.10. Администрация обязуется рассмотреть претензию, оформленную в порядке предусмотренном разделом 4 соглашения, в течении 30 (тридцати) календарных дней с даты ее получения.</p>
+
+                <p class="no-margin"><b>5. Порядок урегулирования споров</b></p>
+                <p class="no-margin">5.1. В случае выявления на Сайте размещенной информации, содержащей в себе результаты интеллектуальной собственности, принадлежащие третьим лицам, правообладатель обязан:</p>
+                <p class="no-margin">5.1.1. Составить претензию с указанием фактических и нормативных оснований, которые дают возможность Администрации изъять информацию из публичного доступа.</p>
+                <p class="no-margin">5.1.2. Прикрепить к претензии доказательства оригинальности результата интеллектуальной собственности (оригинальный экземпляр, другие документы, подтверждающие правообладание на объект авторского права).</p>
+                <p class="no-margin">5.1.3. Отправить пакет документов, упомянутых в положениях п.п. 5.1.1., 5.1.2. настоящего Соглашения, на электронный почтовый ящик администрации: poddergka.magazina@gmail.com</p>
+                <p class="no-margin">5.2. Претензии Пользователей по качеству обслуживания, продукции, а так же другие замечания, следует отправлять на электронный почтовый ящик администрации: poddergka.magazina@gmail.com</p>
+                <p class="no-margin">5.3. В случае описанном п. 3.2.3. Пользовательского соглашения, рекламации, претензии, замечания направляются руководству соответствующих ресурсов. Администрация вправе не реагировать на такие обращения.</p>
+                <p>5.4. Администрация не обязана содействовать поиску указанных в п. 3.2.3. лиц, а так же иных третьих лиц, действиями которых были нарушены права, свободы и интересы Пользователей.</p>
+
+                <p class="no-margin"><b>6. Прочие условия</b></p>
+                <p class="no-margin">6.1. Все возможные ситуации, споры, вытекающие из взаимоотношений Пользователей, Пользователей и третьих лиц, Пользователей и администрации, не урегулированные этим соглашением, решаются в порядке, определенном нормами действующего законодательства Российской Федерации.</p>
+                <p class="no-margin">6.2. Стороны по настоящему соглашению осознают объем прав и обязанностей, порожденных взаимоотношениями лиц, упомянутых этим соглашением, и в полной мере отдают отчет своим действиям, понимая юридическую природу последствий таких действий, в полной мере.</p>
+                <p class="no-margin">6.3. Бездействие со стороны Администрации в случае нарушения кем-либо из Пользователей положений Соглашения, не лишает Администрацию права предпринять позднее соответствующие действия в защиту своих интересов и защиту охраняемых законом прав.</p>
+                <p class="no-margin">6.4. По всем вопросам, кроме тех, которые зафиксированы в Разделе 5 Пользовательского соглашения, Пользователи могут обращаться к Администрации, путем направления соответствующих обращений.</p>
+                <p class="no-margin">6.5. Контактные данные администрации:</p>
+                <p class="no-margin">poddergka.magazina@gmail.com  - заказ товаров и связь с менеджерами;</p>
+                <p>poddergka.magazina@gmail.com - вопросы сотрудничества, рекламы, оптовых заказов.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="kmacb">
+    <a title="Перезвонить Вам" href="index.html#" modal="kmacb-form">
+        <div class="kmacb-circle"></div>
+        <div class="kmacb-circle-fill"></div>
+        <div class="kmacb-img-circle"></div>
+    </a>
+</div>
+
+<div id="kmacb-form" class="modal">
+    <div class="modal-block">
+        <div class="icon-close"></div>
+        <div class="title">Понравилось это предложение?</div>
+        <div class="content">
+            <div class="padding">
+                <p>Мы расскажем Вам все об этом товаре, предложим наилучшие условия и ознакомим с подходящими акционными предложениями!</p>
+               <form method="POST" action="success.php">
+                    <input type="text" name="name" value="" placeholder="Ваше имя" />
+                    <input type="text" name="phone" value="" placeholder="Ваш номер телефона" /><br>
+                    <input type="submit" value="ПЕРЕЗВОНИТЬ МНЕ" />
+                    <input type="hidden" name="s1" class="price_field_s1" value="1490" />
+                    <input type="hidden" name="s2" class="price_field_s2" value="350" />
+                    <input type="hidden" name="s3" class="price_field_s3" value="1840" />
+                </form> 
+                <p class="bold">Оператор перезвонит Вам через 15-30 минут</p>
+            </div>
+        </div>
+    </div>
+</div><script type="text/javascript"><!--
+    //-->
+</script>
+
+ </body>
+</html>

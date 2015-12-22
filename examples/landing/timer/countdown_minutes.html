@@ -1,0 +1,96 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!-- Mirrored from happygifts.com.ua/riddex/countdown_minutes.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jun 2014 07:02:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Untitled Page</title>
+<meta name="generator" content="WYSIWYG Web Builder 9 - http://www.wysiwygwebbuilder.com">
+<style type="text/css">
+div#container
+{
+   width: 58px;
+   position: relative;
+   margin-top: 0px;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: left;
+}
+body
+{
+   text-align: center;
+   margin: 0;
+   background-color: transparent;
+   color: #000000;
+}
+</style>
+<style type="text/css">
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #FF0000;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+</style>
+</head>
+<body>
+
+
+<div id="container">
+<div id="wb_timer2" style="position:absolute;left:0px;top:0px;width:57px;height:25px;z-index:0;">
+<div style="color:#1F1F1F;font-size:48px;font-family:Trebuchet MS;font-weight:bold;font-style:normal;text-decoration:none" id="countdown"></div>
+<script type="text/javascript">
+var strTargetDate = "12/25/3012 12:00 AM";
+var strFormat = "$MINUTES$";
+var strExpired = "Акция закончена";
+
+function doCountDown(seconds) 
+{
+   if (seconds < 0) 
+   {
+      document.getElementById("countdown").innerHTML = strExpired;
+      return;
+   }
+   var strMsg = strFormat;
+   strMsg = strMsg.replace("$DAYS$",    ((Math.floor(seconds/86400))%100000).toString());
+   strMsg = strMsg.replace("$HOURS$",   ((Math.floor(seconds/3600))%24).toString());
+   strMsg = strMsg.replace("$MINUTES$", ((Math.floor(seconds/60))%60).toString());
+   strMsg = strMsg.replace("$SECONDS$",  ((Math.floor(seconds))%60).toString()); 
+
+   document.getElementById("countdown").innerHTML = strMsg;
+
+   setTimeout("doCountDown(" + (seconds-1).toString() + ")", 1000);
+}
+function initCountDown()
+{
+   var dtTarget = new Date(strTargetDate);
+   var dtNow = new Date();
+   var dtDiff = new Date(dtTarget-dtNow);
+   var totalSeconds = Math.floor(dtDiff.valueOf()/1000);
+
+   doCountDown(totalSeconds);
+}
+initCountDown();
+</script>
+
+</div>
+
+</div>
+</body>
+
+
+</html>
